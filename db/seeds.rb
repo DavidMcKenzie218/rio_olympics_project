@@ -15,3 +15,7 @@ brazil.save()
 peru.save()
 france.save()
 gb.save()
+
+binding.pry
+
+nil

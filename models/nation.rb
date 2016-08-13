@@ -17,8 +17,19 @@ class Nation
   end
 
   def self.delete_all()
-    sql = "DELETE FROM nations"
+    sql = "DELETE FROM nations;"
     SqlRunner.run(sql)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM nations;"
+    return Nation.map_items(sql)
+  end
+
+  def self.map_items(sql)
+    nations = SqlRunner.run(sql)
+    result = nations.map { |nation| Nation.new( nation ) }
+    return result
   end
 
 end
