@@ -13,9 +13,9 @@ class Athlete
   end
 
   def save()
-    sql = "INSERT INTO athletes (name) VALUES ('#{@name}') RETURNING *;"
-    event = SqlRunner.run(sql).first
-    @id = event['id']
+    sql = "INSERT INTO athletes (name, nation_id, event_id) VALUES ('#{@name}', #{@nation_id}, #{@event_id}) RETURNING *;"
+    athlete = SqlRunner.run(sql).first
+    @id = athlete['id']
   end
 
   def self.delete_all
@@ -25,7 +25,7 @@ class Athlete
 
   def self.all()
     sql = "SELECT * FROM athletes;"
-    return Event.map_items(sql)
+    return Athlete.map_items(sql)
   end
 
   def self.find(id)
@@ -35,7 +35,7 @@ class Athlete
 
   def self.map_items(sql)
     athletes = SqlRunner.run(sql)
-    result = athletes.map { |athlete| Event.new( athlete ) }
+    result = athletes.map { |athlete| Athlete.new( athlete ) }
     return result
   end
 
