@@ -25,6 +25,12 @@ running.save()
 swimming.save()
 dressage.save()
 
+marcelo = Athlete.new({'name' => 'Marcelo', 'nation_id' => brazil.id, 'event.id' => running.id})
+vargas = Athlete.new({'name' => 'Vargas', 'nation_id' => peru.id, 'event_id' => dressage.id})
+
+marcelo.save()
+vargas.save()
+
 binding.pry
 
 nil
