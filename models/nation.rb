@@ -1,5 +1,5 @@
 require_relative '../db/sql_runner.rb'
-require('pg')
+require 'pg'
 
 class Nation
 
