@@ -1,7 +1,6 @@
-DROP TABLE nations;
 DROP TABLE athletes;
+DROP TABLE nations;
 DROP TABLE events;
-
 CREATE TABLE nations(
 id SERIAL8 PRIMARY KEY,
 name VARCHAR(255)
@@ -11,7 +10,7 @@ name VARCHAR(255)
 CREATE TABLE events(
 id SERIAL8 PRIMARY KEY,
 name VARCHAR(255)
-)
+);
 
 CREATE TABLE athletes(
 id SERIAL8 PRIMARY KEY,
