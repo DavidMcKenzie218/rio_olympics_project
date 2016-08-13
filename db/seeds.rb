@@ -4,7 +4,8 @@ require_relative '../models/nation.rb'
 require_relative '../models/event.rb'
 require_relative '../models/athlete.rb'
 
-Nation.delete_all
+Nation.delete_all()
+Event.delete_all()
 
 brazil = Nation.new({'name' => 'Brazil'})
 peru = Nation.new({'name' => 'Peru'})
@@ -15,6 +16,14 @@ brazil.save()
 peru.save()
 france.save()
 gb.save()
+
+running = Event.new({'name' => 'Running'})
+swimming = Event.new({'name' => 'Swimming'})
+dressage = Event.new({'name' => 'Dressage'})
+
+running.save()
+swimming.save()
+dressage.save()
 
 binding.pry
 
