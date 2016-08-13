@@ -32,4 +32,9 @@ class Nation
     return result
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM nations WHERE id = #{id}"
+    return SqlRunner.run(sql)
+  end 
+
 end
