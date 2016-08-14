@@ -3,17 +3,18 @@ require 'pg'
 
 class Athlete
 
-  attr_reader :name, :id, :nation_id, :event_id
+  attr_reader :name, :id, :nation_id, :event_id, :event_time
 
   def initialize(options)
     @name = options['name']
     @id = options['id'].to_i
     @nation_id = options['nation_id'].to_i
     @event_id = options['event_id'].to_i
+    @event_time = options['event_time'].to_f
   end
 
   def save()
-    sql = "INSERT INTO athletes (name, nation_id, event_id) VALUES ('#{@name}', #{@nation_id}, #{@event_id}) RETURNING *;"
+    sql = "INSERT INTO athletes (name, nation_id, event_id, event_time) VALUES ('#{@name}', #{@nation_id}, #{@event_id}, #{event_time}) RETURNING *;"
     athlete = SqlRunner.run(sql).first
     @id = athlete['id']
   end
