@@ -30,6 +30,7 @@ class Event
 
   def assign_medals
     athletes()
+    results()
     assign_gold_medal()
     assign_silver_medal()
     assign_bronze_medal()

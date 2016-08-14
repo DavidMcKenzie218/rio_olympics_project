@@ -42,4 +42,8 @@ class TestLeague < Minitest::Test
     assert_equal(1, @league.nation_points(3))
   end
 
+  def test_can_rank_nations_based_on_their_points
+    assert_equal([{'name' => 'Brazil', 'points' => 5}, {'name' => 'Peru', 'points' => 5}, {'name' => 'Great Britain', 'points' => 3}, {'name' => 'France', 'points' => 1}], @league.rank_on_medal_points)
+  end
+
 end

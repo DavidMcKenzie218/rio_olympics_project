@@ -23,7 +23,6 @@ class League
       nation = @nations.find{ |nation| nation.id ==athlete.nation_id}
       # binding.pry
 
-
       if athlete.medal == 'gold'        
         nation.points += 5
       elsif athlete.medal == 'silver'
@@ -40,6 +39,17 @@ class League
   def nation_points(nation_id)
     nation = @nations.find {|nation| nation.id == nation_id}
     return nation.points
+  end
+
+  def rank_on_medal_points
+    assign_points()
+    rankings = @nations.map do |nation|
+      {'name' => nation.name,
+        'points' => nation_points(nation.id)
+      }
+    end
+    places = rankings.sort{|nation1, nation2| nation2['points'] <=> nation1['points']}
+    return places
   end
 
 end
