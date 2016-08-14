@@ -16,6 +16,11 @@ class Nation
     @id = nation['id']
   end
 
+  def delete()
+    sql = "DELETE * FROM nation WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all()
     sql = "DELETE FROM nations;"
     SqlRunner.run(sql)
