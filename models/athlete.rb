@@ -30,6 +30,7 @@ class Athlete
         event_id = '#{options['@event_id']}'
         WHERE id=#{options['id']};"
         SqlRunner.run(sql)
+  end
   
 
   def self.delete_all
