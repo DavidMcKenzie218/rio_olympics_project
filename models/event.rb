@@ -22,16 +22,37 @@ class Event
     SqlRunner.run(sql)
   end
 
-  def athlete()
+  def athletes()
     sql = "SELECT * FROM athletes WHERE athletes.event_id = #{@id}"
    @athletes = Athlete.map_items(sql)
    return @athletes
   end
 
+  def assign_medals
+    athletes()
+    assign_gold_medal()
+    assign_silver_medal()
+    assign_bronze_medal()
+  end
+
   def assign_gold_medal
-    winner = @athletes.first
+    gold = @athletes.first
     sql = "UPDATE athletes SET 
-    medal = 'gold' WHERE athletes.id = #{winner.id};"
+    medal = 'gold' WHERE athletes.id = #{gold.id};"
+    SqlRunner.run(sql)
+  end
+
+  def assign_silver_medal
+    silver = @athletes[1]
+    sql = "UPDATE athletes SET 
+    medal = 'silver' WHERE athletes.id = #{silver.id};"
+    SqlRunner.run(sql)
+  end
+
+  def assign_bronze_medal
+    bronze = @athletes[2]
+    sql = "UPDATE athletes SET 
+    medal = 'bronze' WHERE athletes.id = #{bronze.id};"
     SqlRunner.run(sql)
   end
 

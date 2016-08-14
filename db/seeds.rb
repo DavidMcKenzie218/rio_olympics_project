@@ -27,9 +27,13 @@ swimming.save()
 dressage.save()
 
 marcelo = Athlete.new({'name' => 'Marcelo', 'nation_id' => brazil.id, 'event_id' => running.id, 'event_time' => 1.10, 'medal' => 'none'})
+paul = Athlete.new({'name' => 'Paul', 'nation_id' => france.id, 'event_id' => running.id, 'event_time' => 1.60, 'medal' => 'none'})
+jimmy = Athlete.new({'name' => 'Jimmy', 'nation_id' => gb.id, 'event_id' => running.id, 'event_time' => 1.30, 'medal' => 'none'})
 vargas = Athlete.new({'name' => 'Vargas', 'nation_id' => peru.id, 'event_id' => dressage.id, 'event_time' => 2, 'medal' => 'none'})
 
 marcelo.save()
+paul.save()
+jimmy.save()
 vargas.save()
 
 binding.pry
