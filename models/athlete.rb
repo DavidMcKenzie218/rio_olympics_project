@@ -18,6 +18,11 @@ class Athlete
     @id = athlete['id']
   end
 
+  def delete()
+    sql = "DELETE * FROM athletes WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all
     sql = "DELETE FROM athletes;"
     SqlRunner.run(sql)
@@ -29,7 +34,7 @@ class Athlete
   end
 
   def self.find(id)
-    sql = "SELECT * FROM athletes WHERE id = #{id}"
+    sql = "SELECT * FROM athletes WHERE id = #{id};"
     return SqlRunner.run(sql)
   end 
 
