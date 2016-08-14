@@ -21,6 +21,13 @@ class Event
     SqlRunner.run(sql)
   end
 
+  def self.update(options)
+    sql = "UPDATE events SET 
+      name = '#{options['name']}'
+      WHEREid = #{options['id']}"
+      SqlRunner.run(sql)
+  end
+
   def self.delete_all
     sql = "DELETE FROM events;"
     SqlRunner.run(sql)

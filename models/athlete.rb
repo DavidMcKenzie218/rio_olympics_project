@@ -25,9 +25,9 @@ class Athlete
 
   def self.update(options)
       sql = "UPDATE athletes SET 
-        name = '#{options[@name]}',
-        nation_id = '#{options[@nation_id]}',
-        event_id = '#{options[@event_id]}'
+        name = '#{options['@name']}',
+        nation_id = '#{options['@nation_id']}',
+        event_id = '#{options['@event_id']}'
         WHERE id=#{options['id']};"
         SqlRunner.run(sql)
   

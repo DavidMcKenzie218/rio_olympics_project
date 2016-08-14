@@ -21,6 +21,13 @@ class Nation
     SqlRunner.run(sql)
   end
 
+  def self.update(options)
+    sql = "UPDATE nations SET 
+      name = '#{opions['name']}
+      WHERE id = #{options[id]};"
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all()
     sql = "DELETE FROM nations;"
     SqlRunner.run(sql)
