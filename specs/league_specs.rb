@@ -54,12 +54,21 @@ class TestLeague < Minitest::Test
     assert_equal(0, @league.number_of_gold_medals(4))
   end
 
-  # def count_silver_medals_for_each_nation_gb
-  #   assert_equal(1, @league.number_of_silver_medals(4))
-  # end
+  def test_count_silver_medals_for_each_nation_gb
+    assert_equal(1, @league.number_of_silver_medals(4))
+  end
 
-  # def count_bronze_medals_for_each_nation_france
-  #   assert_equal(1, @league.number_of_bronze_medals(3))
-  # end
+  def test_count_silver_medals_for_each_nation_brazil
+    assert_equal(0, @league.number_of_silver_medals(1))
+  end
+
+  def test_count_bronze_medals_for_each_nation_france
+    assert_equal(1, @league.number_of_bronze_medals(3))
+  end
+
+
+  def test_count_bronze_medals_for_each_nation_brazil
+    assert_equal(0, @league.number_of_bronze_medals(1))
+  end
 
 end

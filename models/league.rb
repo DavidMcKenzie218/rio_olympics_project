@@ -65,4 +65,30 @@ class League
     return gold_count
   end
 
+  def number_of_silver_medals(nation_id)
+    silver_count = 0
+    nation = @nations.find {|nation| nation.id == nation_id}
+    @athletes.each do |athlete|
+      if athlete.nation_id == nation_id
+        if athlete.medal == 'silver'
+          silver_count +=1
+        end
+      end
+    end 
+    return silver_count
+  end
+
+  def number_of_bronze_medals(nation_id)
+    bronze_count = 0
+    nation = @nations.find {|nation| nation.id == nation_id}
+    @athletes.each do |athlete|
+      if athlete.nation_id == nation_id
+        if athlete.medal == 'bronze'
+          bronze_count +=1
+        end
+      end
+    end 
+    return bronze_count
+  end
+
 end
