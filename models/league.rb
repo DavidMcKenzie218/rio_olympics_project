@@ -5,9 +5,14 @@ require_relative './nation.rb'
 class League 
 
   def initialize()
-    @athletes = Athletes.all()
-    @events = Events.all()
-    @nations = Nations.all()
+    @athletes = Athlete.all()
+    @events = Event.all()
+    @nations = Nation.all()
   end
+
+  #Rank athletes based on their score in each event
+  #Rank nations based on athletes scores
+  #Give the nations the total medals, gold, silver, bronze
+
 
 end
