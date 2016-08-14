@@ -25,6 +25,6 @@ class TestLeague < Minitest::Test
     @league = League.new(nations, events, athletes)
   end
 
-  
+ 
 
 end

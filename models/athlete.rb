@@ -11,6 +11,7 @@ class Athlete
     @nation_id = options['nation_id'].to_i
     @event_id = options['event_id'].to_i
     @event_time = options['event_time'].to_f
+    @medal = options['medal']
   end
 
   def save()

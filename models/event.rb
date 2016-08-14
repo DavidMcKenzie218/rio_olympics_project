@@ -8,6 +8,7 @@ class Event
   def initialize(options)
     @name = options['name']
     @id = options['id'].to_i
+    @athletes = []
   end
 
   def save()
@@ -23,7 +24,26 @@ class Event
 
   def athlete()
     sql = "SELECT * FROM athletes WHERE athletes.event_id = #{@id}"
-    return Athlete.map_items(sql)
+   @athletes = Athlete.map_items(sql)
+   return @athletes
+  end
+
+  def assign_gold_medal
+    winner = @athletes.first
+    sql = "UPDATE athletes SET 
+    medal = 'gold' WHERE athletes.id = #{winner.id};"
+    SqlRunner.run(sql)
+  end
+
+  def results
+    rankings = @athletes.map do |athlete|
+      {
+        'athlete' => athlete,
+        'time' => athlete.event_time()
+      }
+    end
+    places = rankings.sort{|athlete1, athlete2| athlete2['time'] <=> athlete1['time']}
+    return places
   end
 
   def self.update(options)
