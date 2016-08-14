@@ -21,6 +21,11 @@ class Event
     SqlRunner.run(sql)
   end
 
+  def athlete()
+    sql = "SELECT * FROM athletes WHERE athletes.event_id = #{@id}"
+    return Athlete.map_items(sql)
+  end
+
   def self.update(options)
     sql = "UPDATE events SET 
       name = '#{options['name']}'
