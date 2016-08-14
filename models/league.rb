@@ -52,4 +52,17 @@ class League
     return places
   end
 
+  def number_of_gold_medals(nation_id)
+    gold_count = 0
+    nation = @nations.find {|nation| nation.id == nation_id}
+    @athletes.each do |athlete|
+      if athlete.nation_id == nation_id
+        if athlete.medal == 'gold'
+          gold_count +=1
+        end
+      end
+    end 
+    return gold_count
+  end
+
 end

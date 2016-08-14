@@ -46,4 +46,20 @@ class TestLeague < Minitest::Test
     assert_equal([{'name' => 'Brazil', 'points' => 5}, {'name' => 'Peru', 'points' => 5}, {'name' => 'Great Britain', 'points' => 3}, {'name' => 'France', 'points' => 1}], @league.rank_on_medal_points)
   end
 
+  def test_count_gold_medals_for_nation_brazil
+    assert_equal(1, @league.number_of_gold_medals(1))
+  end
+
+  def test_count_gold_medals_for_nation_gb
+    assert_equal(0, @league.number_of_gold_medals(4))
+  end
+
+  # def count_silver_medals_for_each_nation_gb
+  #   assert_equal(1, @league.number_of_silver_medals(4))
+  # end
+
+  # def count_bronze_medals_for_each_nation_france
+  #   assert_equal(1, @league.number_of_bronze_medals(3))
+  # end
+
 end
