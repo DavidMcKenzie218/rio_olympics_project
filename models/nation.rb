@@ -4,14 +4,16 @@ require 'pg'
 class Nation
 
   attr_reader :name, :id
+  attr_accessor :points
 
   def initialize(options)
     @name = options['name']
-    @id = options['id'].to_i    
+    @id = options['id'].to_i
+    @points = options['points'].to_i    
   end
 
   def save()
-    sql = "INSERT INTO nations (name) VALUES ('#{@name}') RETURNING *;"
+    sql = "INSERT INTO nations (name, points) VALUES ('#{@name}', #{@points}) RETURNING *;"
     nation = SqlRunner.run(sql).first
     @id = nation['id']
   end
@@ -28,7 +30,8 @@ class Nation
 
   def self.update(options)
     sql = "UPDATE nations SET 
-      name = '#{opions['name']}
+      name = '#{opions['name']},
+      points = #{options['points']}
       WHERE id = #{options[id]};"
     SqlRunner.run(sql)
   end

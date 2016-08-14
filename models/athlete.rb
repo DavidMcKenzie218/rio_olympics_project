@@ -3,7 +3,7 @@ require 'pg'
 
 class Athlete
 
-  attr_reader :name, :id, :nation_id, :event_id, :event_time
+  attr_reader :name, :id, :nation_id, :event_id, :event_time, :medal
 
   def initialize(options)
     @name = options['name']
