@@ -28,6 +28,11 @@ class Athlete
     return Event.map_items(sql)
   end
 
+  def nation()
+    sql = "SELECT * FROM nations WHERE nations.id = #{@nation_id};"
+    return Nation.map_items(sql)
+  end
+
   def self.update(options)
       sql = "UPDATE athletes SET 
         name = '#{options['@name']}',
