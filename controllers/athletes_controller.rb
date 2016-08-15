@@ -33,7 +33,6 @@ end
 #SHOW
 
 get('/athletes/:id') do
-  @athlete = Athlete.find(params['id'])
-  binding.pry
+  @athlete = Athlete.find(params['id']).first
   erb(:'athlete/show')
 end

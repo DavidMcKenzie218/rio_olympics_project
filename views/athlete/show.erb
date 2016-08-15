@@ -6,6 +6,7 @@
 <h3>Event</h3>
 <p><%= @athlete.event.first.name %></p>
 
-<% if athlete.medals != nil %>
+<% if @athlete.medal != nil %>
+  <h3>Medal: </h3>
   <p><%= @athlete.medal %></p>
 <% end %>
