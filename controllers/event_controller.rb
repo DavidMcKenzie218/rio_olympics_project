@@ -32,6 +32,11 @@ end
 
 #EDIT
 
+get('/events/:id/edit') do 
+  @event = Event.find(params['id']).first
+  erb(:'event/edit')
+end
+
 #UPDATE
 
 #DESTROY

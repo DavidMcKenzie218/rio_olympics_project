@@ -15,8 +15,11 @@ post('/athletes') do
   # binding.pry
   @athlete.save
   events = Event.all
-  events.each {|event| 
-    event.assign_medals}
+  events.each do |event| 
+    if event.athletes.count > 0
+      event.assign_medals_athletes
+    end
+  end
   erb(:'athlete/create')
 end
 
@@ -25,9 +28,11 @@ end
 get('/athletes') do  
   events = Event.all
   # binding.pry
-  events.each {|event| 
-    # binding.pry
-    event.assign_medals}
+  events.each do |event| 
+    if event.athletes.count > 0
+      event.assign_medals_athletes
+  end
+end
   @athletes = Athlete.all()
   # binding.pry
   erb(:'athlete/index')
@@ -57,8 +62,11 @@ post('/athletes/:id') do
   Athlete.update(params)
   # binding.pry
   events = Event.all
-  events.each {|event| 
-    event.assign_medals}
+  events.each do |event| 
+    if event.athletes.count > 0
+      event.assign_medals_athletes
+    end
+  end
   redirect(to('/athletes'))
 end
 

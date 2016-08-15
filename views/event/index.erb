@@ -13,7 +13,7 @@
     <tr>
       <td><%= event.name %></td>
       <% if event.athletes.count > 0  %>
-      <% event.assign_medals %>
+      <% event.assign_medals_event %>
       <td><%= event.gold_medalist['athlete'].name %></td>
       <td><%= event.silver_medalist['athlete'].name %></td>
       <td><%= event.bronze_medalist['athlete'].name %></td>

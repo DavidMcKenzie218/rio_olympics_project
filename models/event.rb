@@ -31,7 +31,7 @@ class Event
    return @athletes
   end
 
-  def assign_medals
+  def assign_medals_event
     athletes()
     results()
     assign_gold_medal()
@@ -40,6 +40,16 @@ class Event
     @silver_medalist = @athletes[1]
     assign_bronze_medal()
     @bronze_medalist = @athletes[2]
+    assign_no_medal()
+  end
+
+  def assign_medals_athletes
+    athletes()
+    # binding.pry
+    results()
+    assign_gold_medal()
+    assign_silver_medal()
+    assign_bronze_medal()
     assign_no_medal()
   end
 
