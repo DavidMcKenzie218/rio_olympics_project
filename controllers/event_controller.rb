@@ -39,4 +39,9 @@ end
 
 #UPDATE
 
+post('/events/:id') do
+  Event.update(params)
+  redirect(to('/events'))
+end
+
 #DESTROY

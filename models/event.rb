@@ -102,7 +102,7 @@ class Event
   def self.update(options)
     sql = "UPDATE events SET 
       name = '#{options['name']}'
-      WHEREid = #{options['id']}"
+      WHERE id = #{options['id']}"
       SqlRunner.run(sql)
   end
 
