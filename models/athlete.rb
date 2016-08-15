@@ -56,7 +56,7 @@ class Athlete
 
   def self.find(id)
     sql = "SELECT * FROM athletes WHERE id = #{id};"
-    return SqlRunner.run(sql)
+    return SqlRunner.run(sql).first
   end 
 
   def self.map_items(sql)

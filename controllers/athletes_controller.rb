@@ -12,7 +12,28 @@ end
 
 post('/athletes') do
   @athlete = Athlete.new(params)
-  binding.pry
+  # binding.pry
   @athlete.save
   erb(:'athlete/create')
+end
+
+#INDEX
+
+get('/athletes') do  
+  events = Event.all
+  # binding.pry
+  events.each {|event| 
+    # binding.pry
+    event.assign_medals}
+  @athletes = Athlete.all()
+  # binding.pry
+  erb(:'athlete/index')
+end
+
+#SHOW
+
+get('/athletes/:id') do
+  @athlete = Athlete.find(params['id'])
+  binding.pry
+  erb(:'athlete/show')
 end

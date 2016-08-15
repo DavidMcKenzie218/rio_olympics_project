@@ -1,0 +1,11 @@
+<h2><%= @athlete.name %></h2>
+
+<h3>Nation</h3>
+<p><%= @athlete.nation.first.name  %></p>
+
+<h3>Event</h3>
+<p><%= @athlete.event.first.name %></p>
+
+<% if athlete.medals != nil %>
+  <p><%= @athlete.medal %></p>
+<% end %>

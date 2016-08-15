@@ -1,0 +1,23 @@
+<h2>Athletes</h2>
+
+<div>
+  <table>
+    <tr>
+      <th>Nation</th>
+      <th>Athlete</th>
+      <th>Event</th>
+      <th>Result</th>
+      <th>Medal</th>
+    </tr>
+    <% @athletes.each do |athlete| %>
+    <tr>
+      <td><%= athlete.nation.first.name %></td>
+      <td><%= athlete.name %></td>
+      <td><%= athlete.event.first.name %></td> 
+      <td><%= athlete.event_time %></td>
+      <td><%= athlete.medal %></td>
+      <td><a href="/athletes/<%= athlete.id %>">Show Athlete</a></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
