@@ -63,8 +63,10 @@ class Event
     # binding.pry
     no_medals = @athletes[3..(@athletes.length)]
     no_medals.each do |no_medal|
+      # binding.pry
       sql = "UPDATE athletes SET 
-      medal = 'none' WHERE athletes.id = #{no_medal['athlete'].id};"
+      medal = ' ' WHERE athletes.id = #{no_medal['athlete'].id};"
+      SqlRunner.run(sql)
     end
   end
 
