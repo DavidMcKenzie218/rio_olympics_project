@@ -108,7 +108,7 @@ class Event
 
   def self.find(id)
     sql = "SELECT * FROM events WHERE id = #{id}"
-    return SqlRunner.run(sql)
+    return Event.map_items(sql)
   end 
 
    def self.map_items(sql)

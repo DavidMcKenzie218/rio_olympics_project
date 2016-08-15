@@ -17,6 +17,12 @@ end
 
 #SHOW
 
+get('/events/:id') do
+  @event = Event.find(params['id'].to_i).first
+  # binding.pry
+  erb(:'event/show')
+end
+
 #INDEX
 
 get('/events') do

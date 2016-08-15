@@ -1,0 +1,21 @@
+<h2><%= @event.name %></h2>
+
+<table>
+  <tr>
+    <th>Athlete</th>
+    <th>Result</th>
+    <th>Nation</th>
+    <th>Medal</th>
+  </tr>
+  <tr>
+    <% athletes = @event.athletes %>
+    <% athletes.each do |athlete| %>
+    <td><%= athlete.name %></td>
+    <td><%= athlete.event_time %></td>
+    <td><%= athlete.nation.first.name %></td>
+    <% if athlete.medal != nil %>
+      <td><%= athlete.medal %></td>
+    <% end %>
+  </tr>
+    <% end %>
+</table>
