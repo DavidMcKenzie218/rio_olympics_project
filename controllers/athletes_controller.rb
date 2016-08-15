@@ -14,6 +14,9 @@ post('/athletes') do
   @athlete = Athlete.new(params)
   # binding.pry
   @athlete.save
+  events = Event.all
+  events.each {|event| 
+    event.assign_medals}
   erb(:'athlete/create')
 end
 
@@ -53,6 +56,16 @@ post('/athletes/:id') do
   # binding.pry
   Athlete.update(params)
   # binding.pry
+  events = Event.all
+  events.each {|event| 
+    event.assign_medals}
+  redirect(to('/athletes'))
+end
+
+#DESTROY
+
+post('/athletes/:id/delete') do
+  Athlete.delete(params['id'])
   events = Event.all
   events.each {|event| 
     event.assign_medals}

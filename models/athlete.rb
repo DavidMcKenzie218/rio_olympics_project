@@ -21,7 +21,7 @@ class Athlete
   end
 
   def self.delete(id)
-    sql = "DELETE * FROM athletes WHERE id = #{id};"
+    sql = "DELETE FROM athletes WHERE id = #{id};"
     SqlRunner.run(sql)
   end
 

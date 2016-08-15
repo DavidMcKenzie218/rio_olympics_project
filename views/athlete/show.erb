@@ -10,3 +10,7 @@
   <h3>Medal: </h3>
   <p><%= @athlete.medal %></p>
 <% end %>
+
+<form action ='/athletes/<%= @athlete.id %>/delete' method='post'>
+    <input type="submit" value ="delete">
+</form>
