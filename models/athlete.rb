@@ -37,10 +37,12 @@ class Athlete
 
   def self.update(options)
       sql = "UPDATE athletes SET 
-        name = '#{options['@name']}',
-        nation_id = '#{options['@nation_id']}',
-        event_id = '#{options['@event_id']}'
-        WHERE id=#{options['id']};"
+        name = '#{options['name']}',
+        nation_id = '#{options['nation_id'].to_i}',
+        event_id = '#{options['event_id'].to_i}',
+        event_time = '#{options['event_time'].to_f}',
+        medal = '#{options['medal']}'
+        WHERE id=#{options['id'].to_i};"
         SqlRunner.run(sql)
   end  
 
@@ -55,7 +57,7 @@ class Athlete
   end
 
   def self.find(id)
-    sql = "SELECT * FROM athletes WHERE id = #{id};"
+    sql = "SELECT * FROM athletes WHERE id = #{id.to_i};"
     return Athlete.map_items(sql)
   end 
 

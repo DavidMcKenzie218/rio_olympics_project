@@ -33,7 +33,8 @@ end
 #SHOW
 
 get('/athletes/:id') do
-  @athlete = Athlete.find(params['id']).first
+  # binding.pry
+  @athlete = Athlete.find(params['id'].to_i).first
   erb(:'athlete/show')
 end
 
@@ -45,3 +46,15 @@ get('/athletes/:id/edit') do
   @athlete = Athlete.find(params['id']).first
   erb(:'athlete/edit')
 end 
+
+#UPDATE
+
+post('/athletes/:id') do
+  # binding.pry
+  Athlete.update(params)
+  # binding.pry
+  events = Event.all
+  events.each {|event| 
+    event.assign_medals}
+  redirect(to('/athletes'))
+end
