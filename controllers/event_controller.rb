@@ -8,6 +8,12 @@ end
 
 #CREATE
 
+post('/events') do
+  @event = Event.new(params)
+  @event.save
+  erb(:'event/create')
+end
+
 #SHOW
 
 #INDEX
