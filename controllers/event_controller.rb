@@ -1,4 +1,5 @@
 require_relative '../models/event.rb'
+require( 'pry-byebug' )
 
 #NEW#
 
@@ -17,6 +18,11 @@ end
 #SHOW
 
 #INDEX
+
+get('/events') do
+  @events = Event.all
+  erb(:'event/index')
+end
 
 #EDIT
 

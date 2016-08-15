@@ -3,12 +3,15 @@ require 'pg'
 
 class Event 
 
-  attr_reader :name, :id
+  attr_reader :name, :id, :gold_medalist, :silver_medalist, :bronze_medalist 
 
   def initialize(options)
     @name = options['name']
     @id = options['id'].to_i
     @athletes = []
+    @gold_medalist = nil
+    @silver_medalist = nil
+    @bronze_medalsit = nil
   end
 
   def save()
@@ -32,30 +35,34 @@ class Event
     athletes()
     results()
     assign_gold_medal()
+    @gold_medalist = @athletes.first
     assign_silver_medal()
+    @silver_medalist = @athletes[1]
     assign_bronze_medal()
+    @bronze_medalist = @athletes[2]
     assign_no_medal()
   end
 
   def assign_gold_medal
     gold = @athletes.first
-    # binding.pry
-    sql = "UPDATE athletes SET 
-    medal = 'gold' WHERE athletes.id = #{gold['athlete'].id};"
+    athlete = gold['athlete']
+    sql = "UPDATE athletes SET medal='gold' WHERE id=#{athlete.id};"
     SqlRunner.run(sql)
   end
 
   def assign_silver_medal
     silver = @athletes[1]
+    athlete = silver['athlete']
     sql = "UPDATE athletes SET 
-    medal = 'silver' WHERE athletes.id = #{silver['athlete'].id};"
+    medal = 'silver' WHERE id = #{athlete.id};"
     SqlRunner.run(sql)
   end
 
   def assign_bronze_medal
     bronze = @athletes[2]
+    athlete = bronze['athlete']
     sql = "UPDATE athletes SET 
-    medal = 'bronze' WHERE athletes.id = #{bronze['athlete'].id};"
+    medal = 'bronze' WHERE athletes.id = #{athlete.id};"
     SqlRunner.run(sql)
   end
 

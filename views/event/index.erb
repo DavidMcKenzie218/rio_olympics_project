@@ -1,0 +1,25 @@
+<h2>Events</h2>
+
+<div>
+  <table>
+    <tr>
+      <th>Event</th>
+      <th>Gold Medalist</th>
+      <th>Silver Medalist</th>
+      <th>Bronze Medalist</th>
+      <th>Participant Number</th>
+    </tr>
+    <% @events.each do |event| %>
+    <% event.assign_medals %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.gold_medalist['athlete'].name %></td>
+      <td><%= event.silver_medalist['athlete'].name %></td>
+      <td><%= event.bronze_medalist['athlete'].name %></td>
+      <td><%= event.athletes.count %></td>
+    </tr>
+    <td><a href="/events/<%= event.id %>">Show Event</a></td>
+    <td><a href="/events/<%= event.id %>/edit">Edit Event</a></td>
+    <% end %>
+  </table>
+</div>
