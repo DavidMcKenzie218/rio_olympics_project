@@ -45,3 +45,8 @@ post('/events/:id') do
 end
 
 #DESTROY
+
+post('/events/:id/delete') do
+  Event.delete(params['id'])
+  redirect(to('/events'))
+end

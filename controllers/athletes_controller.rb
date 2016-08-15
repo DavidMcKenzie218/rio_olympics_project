@@ -16,7 +16,7 @@ post('/athletes') do
   @athlete.save
   events = Event.all
   events.each do |event| 
-    if event.athletes.count > 0
+    if event.athletes.count > 2
       event.assign_medals_athletes
     end
   end
@@ -29,7 +29,7 @@ get('/athletes') do
   events = Event.all
   # binding.pry
   events.each do |event| 
-    if event.athletes.count > 0
+    if event.athletes.count > 2
       event.assign_medals_athletes
   end
 end
@@ -63,7 +63,7 @@ post('/athletes/:id') do
   # binding.pry
   events = Event.all
   events.each do |event| 
-    if event.athletes.count > 0
+    if event.athletes.count > 2
       event.assign_medals_athletes
     end
   end

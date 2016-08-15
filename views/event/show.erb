@@ -19,3 +19,7 @@
   </tr>
     <% end %>
 </table>
+
+<form action ='/events/<%= @event.id %>/delete' method='post'>
+  <input type="submit" value ="delete">
+</form>

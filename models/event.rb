@@ -20,8 +20,8 @@ class Event
     @id = event['id']
   end
 
-  def delete()
-    sql = "DELETE * FROM events WHERE id = #{@id};"
+  def self.delete(id)
+    sql = "DELETE FROM events WHERE id = #{id};"
     SqlRunner.run(sql)
   end
 

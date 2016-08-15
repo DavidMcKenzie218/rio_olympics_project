@@ -12,7 +12,7 @@
     <% @events.each do |event| %>    
     <tr>
       <td><%= event.name %></td>
-      <% if event.athletes.count > 0  %>
+      <% if event.athletes.count > 2  %>
       <% event.assign_medals_event %>
       <td><%= event.gold_medalist['athlete'].name %></td>
       <td><%= event.silver_medalist['athlete'].name %></td>
