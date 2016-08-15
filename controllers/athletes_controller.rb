@@ -66,8 +66,5 @@ end
 
 post('/athletes/:id/delete') do
   Athlete.delete(params['id'])
-  events = Event.all
-  events.each {|event| 
-    event.assign_medals}
   redirect(to('/athletes'))
 end

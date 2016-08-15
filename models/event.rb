@@ -34,37 +34,49 @@ class Event
     assign_gold_medal()
     assign_silver_medal()
     assign_bronze_medal()
+    assign_no_medal()
   end
 
   def assign_gold_medal
     gold = @athletes.first
+    # binding.pry
     sql = "UPDATE athletes SET 
-    medal = 'gold' WHERE athletes.id = #{gold.id};"
+    medal = 'gold' WHERE athletes.id = #{gold['athlete'].id};"
     SqlRunner.run(sql)
   end
 
   def assign_silver_medal
     silver = @athletes[1]
     sql = "UPDATE athletes SET 
-    medal = 'silver' WHERE athletes.id = #{silver.id};"
+    medal = 'silver' WHERE athletes.id = #{silver['athlete'].id};"
     SqlRunner.run(sql)
   end
 
   def assign_bronze_medal
     bronze = @athletes[2]
     sql = "UPDATE athletes SET 
-    medal = 'bronze' WHERE athletes.id = #{bronze.id};"
+    medal = 'bronze' WHERE athletes.id = #{bronze['athlete'].id};"
     SqlRunner.run(sql)
   end
 
+  def assign_no_medal
+    # binding.pry
+    no_medals = @athletes[3..(@athletes.length)]
+    no_medals.each do |no_medal|
+      sql = "UPDATE athletes SET 
+      medal = 'none' WHERE athletes.id = #{no_medal['athlete'].id};"
+    end
+  end
+
   def results
-    rankings = @athletes.map do |athlete|
+    @athletes.map! do |athlete|
       {
         'athlete' => athlete,
         'time' => athlete.event_time()
       }
+      # binding.pry
     end
-    places = rankings.sort{|athlete1, athlete2| athlete2['time'] <=> athlete1['time']}
+    places = @athletes.sort!{|athlete1, athlete2| athlete1['time'] <=> athlete2['time']}
     return places
   end
 
