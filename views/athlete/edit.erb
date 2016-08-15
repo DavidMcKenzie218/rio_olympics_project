@@ -1,0 +1,28 @@
+<h2>Edit Athlete</h2>
+
+<form action="/athletes/<%= @athlete.id %>" method="post">
+  
+<label for="name">Name: </label>
+<input type="text" name="name" value="<%= @athlete.name %>">
+
+<label for="nation_id">Nation: </label>
+<select name="nation_id">
+  <% @nations.each do |nation| %>
+  <option value="<%= nation.id  %>" <%= 'selected' if nation.id ==  @athlete.nation_id %>><%= nation.name %></option>
+  <% end %>
+</select>
+
+<label for="event_id">Event: </label>
+<select name="event_id">
+  <% @events.each do |event| %>
+  <option value="<%= event.id %>" <%= 'selected' if event.id == @athlete.event_id %>><%= event.name %></option>
+  <% end %>
+</select>
+
+
+<label for="event_time">Event Time: </label>
+<input type="text" name="event_time" value="<%= @athlete.event_time %>">
+
+<input type="submit" name="Edit an Athlete">
+
+</form>

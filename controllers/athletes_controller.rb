@@ -4,7 +4,7 @@ require_relative '../models/athlete.rb'
 
 get('/athletes/new') do
   @nations = Nation.all()
-  @events = Event.all
+  @events = Event.all()
   erb(:'athlete/new')
 end
 
@@ -36,3 +36,12 @@ get('/athletes/:id') do
   @athlete = Athlete.find(params['id']).first
   erb(:'athlete/show')
 end
+
+#EDIT
+
+get('/athletes/:id/edit') do
+  @nations = Nation.all()
+  @events = Event.all()
+  @athlete = Athlete.find(params['id']).first
+  erb(:'athlete/edit')
+end 
