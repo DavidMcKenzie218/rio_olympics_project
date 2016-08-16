@@ -10,9 +10,9 @@
   <tr>
     <% athletes = @event.athletes %>
     <% athletes.each do |athlete| %>
-    <td><%= athlete.name %></td>
+    <td><a href="/athletes/<%= athlete.id %>"><%= athlete.name %></a></td>
     <td><%= athlete.event_time %></td>
-    <td><%= athlete.nation.first.name %></td>
+    <td><a href="/athletes/<%= athlete.nation.first.id %>"><%= athlete.nation.first.name %></a></td>
     <% if athlete.medal != nil %>
       <td><%= athlete.medal %></td>
     <% end %>
@@ -21,5 +21,5 @@
 </table>
 
 <form action ='/events/<%= @event.id %>/delete' method='post'>
-  <input type="submit" value ="delete">
+  <input type="submit" value ="Delete this Event">
 </form>

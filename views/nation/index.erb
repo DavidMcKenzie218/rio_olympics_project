@@ -20,8 +20,8 @@
       <td><%= @olympics.number_of_bronze_medals(nation.id) %></td>
       <td><%= nation.athlete.count %></td>
 
-      <td><a href="/nations/<%= nation.id %>">Show Nation</a></td>
-      <td><a href="/nations/<%= nation.id %>/edit">Edit Nation</a></td>
+      <td><a href="/nations/<%= nation.id %>">Inspect this Nation</a></td>
+      <td><a href="/nations/<%= nation.id %>/edit">Edit this Nation</a></td>
     </tr> 
     <% end %> 
   </table>

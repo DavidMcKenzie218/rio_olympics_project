@@ -1,10 +1,10 @@
 <h2><%= @athlete.name %></h2>
 
 <h3>Nation</h3>
-<p><%= @athlete.nation.first.name  %></p>
+<p><a href="/nations/<%= @athlete.nation.first.id %>"><%= @athlete.nation.first.name  %></a></p>
 
 <h3>Event</h3>
-<p><%= @athlete.event.first.name %></p>
+<p><a href="/events/<%= @athlete.event.first.id %>"><%= @athlete.event.first.name %></a></p>
 
 <% if @athlete.medal != nil %>
   <h3>Medal: </h3>
@@ -12,5 +12,5 @@
 <% end %>
 
 <form action ='/athletes/<%= @athlete.id %>/delete' method='post'>
-    <input type="submit" value ="delete">
+    <input type="submit" value ="Delete this Athlete">
 </form>
