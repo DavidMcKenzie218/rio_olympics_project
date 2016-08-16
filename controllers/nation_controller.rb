@@ -51,3 +51,8 @@ post('/nations/:id') do
 end
 
 #DESTROY
+
+post('/nations/:id/delete') do
+  Nation.delete(params['id'])
+  redirect(to('/nations'))
+end

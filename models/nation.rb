@@ -18,8 +18,8 @@ class Nation
     @id = nation['id']
   end
 
-  def delete()
-    sql = "DELETE * FROM nation WHERE id = #{@id};"
+  def self.delete(id)
+    sql = "DELETE FROM nations WHERE id = #{id};"
     SqlRunner.run(sql)
   end
 
