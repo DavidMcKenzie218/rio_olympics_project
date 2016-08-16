@@ -19,6 +19,9 @@
       <td><%= @olympics.number_of_silver_medals(nation.id) %></td>
       <td><%= @olympics.number_of_bronze_medals(nation.id) %></td>
       <td><%= nation.athlete.count %></td>
+
+      <td><a href="/nations/<%= nation.id %>">Show Event</a></td>
+      <td><a href="/nations/<%= nation.id %>/edit">Edit Event</a></td>
     </tr> 
     <% end %> 
   </table>

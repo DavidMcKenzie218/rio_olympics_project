@@ -16,6 +16,12 @@ end
 
 #SHOW
 
+get('/nations/:id') do 
+  @nation = Nation.find(params['id'].to_i).first
+  # binding.pry
+  erb(:'nation/show')
+end
+
 #INDEX
 
 get('/nations') do

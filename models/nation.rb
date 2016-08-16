@@ -50,7 +50,7 @@ class Nation
   
   def self.find(id)
     sql = "SELECT * FROM nations WHERE id = #{id}"
-    return SqlRunner.run(sql)
+    return Nation.map_items(sql)
   end 
 
   def self.map_items(sql)

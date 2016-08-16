@@ -1,0 +1,21 @@
+<h2><%= @nation.name %></h2>
+
+<table>
+  <tr>
+    <th>Athlete</th>
+    <th>Medals</th>
+  </tr>
+  <tr>
+    <% athletes = @nation.athlete() %>
+    <% athletes.each do |athlete| %>
+    <td><%= athlete.name %></td>
+    <% if athlete.medal != nil %>
+      <td><%= athlete.medal %></td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
+
+<form action ='/nations/<%= @nation.id %>/delete' method='post'>
+  <input type="submit" value ="delete">
+</form>
