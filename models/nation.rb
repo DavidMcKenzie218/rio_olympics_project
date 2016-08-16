@@ -18,18 +18,14 @@ class Nation
     @id = nation['id']
   end
 
-  def self.delete(id)
-    sql = "DELETE FROM nations WHERE id = #{id};"
-    SqlRunner.run(sql)
-  end
-
   def athlete
     sql = "SELECT * FROM athletes WHERE athletes.nation_id = #{@id};"
     return Athlete.map_items(sql)
   end
 
+  #SELF METHODS
+
   def self.update(options)
-    # binding.pry
     sql = "UPDATE nations SET 
       name = '#{options['name']}',
       points = #{options['points'].to_i}
@@ -47,7 +43,6 @@ class Nation
     return Nation.map_items(sql)
   end
 
-  
   def self.find(id)
     sql = "SELECT * FROM nations WHERE id = #{id}"
     return Nation.map_items(sql)
@@ -59,5 +54,9 @@ class Nation
     return result
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM nations WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
 
 end

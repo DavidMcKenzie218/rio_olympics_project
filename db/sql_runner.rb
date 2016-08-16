@@ -1,9 +1,9 @@
 class SqlRunner
 
-  def self.run( sql )
+  def self.run(sql)
     begin
-      db = PG.connect({ dbname: 'rio_olympics', host: 'localhost' })
-      result = db.exec( sql )
+      db = PG.connect({dbname: 'rio_olympics', host: 'localhost'})
+      result = db.exec(sql)
     ensure
       db.close
     end

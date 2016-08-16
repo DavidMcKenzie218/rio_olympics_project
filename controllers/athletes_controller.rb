@@ -12,7 +12,6 @@ end
 
 post('/athletes') do
   @athlete = Athlete.new(params)
-  # binding.pry
   @athlete.save
   events = Event.all
   events.each do |event| 
@@ -27,21 +26,18 @@ end
 
 get('/athletes') do  
   events = Event.all
-  # binding.pry
   events.each do |event| 
     if event.athletes.count > 2
       event.assign_medals_athletes
   end
 end
   @athletes = Athlete.all()
-  # binding.pry
   erb(:'athlete/index')
 end
 
 #SHOW
 
 get('/athletes/:id') do
-  # binding.pry
   @athlete = Athlete.find(params['id'].to_i).first
   erb(:'athlete/show')
 end
@@ -58,9 +54,7 @@ end
 #UPDATE
 
 post('/athletes/:id') do
-  # binding.pry
   Athlete.update(params)
-  # binding.pry
   events = Event.all
   events.each do |event| 
     if event.athletes.count > 2

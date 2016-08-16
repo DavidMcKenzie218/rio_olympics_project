@@ -10,7 +10,6 @@ class League
     @athletes = athletes
     @events = events
     @nations = nations
-    # binding.pry
   end
 
   #Rank athletes based on their score in each event
@@ -23,10 +22,8 @@ class League
 
   def assign_points
     @athletes.each do |athlete|
-      # @binding.pry
    
      nation = @nations.find{ |nation| nation.id ==athlete.nation_id}
-      # binding.pry
 
       if athlete.medal == 'gold'        
         nation.points += 5

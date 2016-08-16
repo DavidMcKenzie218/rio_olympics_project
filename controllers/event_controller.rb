@@ -19,7 +19,6 @@ end
 
 get('/events/:id') do
   @event = Event.find(params['id'].to_i).first
-  # binding.pry
   erb(:'event/show')
 end
 

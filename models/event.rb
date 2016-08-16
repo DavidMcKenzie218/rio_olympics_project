@@ -20,11 +20,6 @@ class Event
     @id = event['id']
   end
 
-  def self.delete(id)
-    sql = "DELETE FROM events WHERE id = #{id};"
-    SqlRunner.run(sql)
-  end
-
   def athletes()
     sql = "SELECT * FROM athletes WHERE athletes.event_id = #{@id}"
    @athletes = Athlete.map_items(sql)
@@ -45,7 +40,6 @@ class Event
 
   def assign_medals_athletes
     athletes()
-    # binding.pry
     results()
     assign_gold_medal()
     assign_silver_medal()
@@ -77,10 +71,8 @@ class Event
   end
 
   def assign_no_medal
-    # binding.pry
     no_medals = @athletes[3..(@athletes.length)]
     no_medals.each do |no_medal|
-      # binding.pry
       sql = "UPDATE athletes SET 
       medal = ' ' WHERE athletes.id = #{no_medal['athlete'].id};"
       SqlRunner.run(sql)
@@ -93,7 +85,6 @@ class Event
         'athlete' => athlete,
         'time' => athlete.event_time()
       }
-      # binding.pry
     end
     places = @athletes.sort!{|athlete1, athlete2| athlete1['time'] <=> athlete2['time']}
     return places
@@ -125,6 +116,11 @@ class Event
      events = SqlRunner.run(sql)
      result = events.map { |event| Event.new( event ) }
      return result
+   end
+
+   def self.delete(id)
+     sql = "DELETE FROM events WHERE id = #{id};"
+     SqlRunner.run(sql)
    end
 
 end

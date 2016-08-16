@@ -18,7 +18,6 @@ end
 
 get('/nations/:id') do 
   @nation = Nation.find(params['id'].to_i).first
-  # binding.pry
   erb(:'nation/show')
 end
 
@@ -29,10 +28,8 @@ get('/nations') do
   @athletes = Athlete.all()
   @events = Event.all()
   @olympics = League.new(@nations, @events, @athletes)
-  # binding.pry
   @olympics.reset_points
   @olympics.rank_on_medal_points
-  # binding.pry
   erb(:'nation/index')
 end
 

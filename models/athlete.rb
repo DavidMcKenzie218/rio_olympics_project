@@ -20,11 +20,6 @@ class Athlete
     @id = athlete['id']
   end
 
-  def self.delete(id)
-    sql = "DELETE FROM athletes WHERE id = #{id};"
-    SqlRunner.run(sql)
-  end
-
   def event()
     sql = "SELECT * FROM events WHERE events.id = #{@event_id};"
     return Event.map_items(sql)
@@ -34,6 +29,8 @@ class Athlete
     sql = "SELECT * FROM nations WHERE nations.id = #{@nation_id};"
     return Nation.map_items(sql)
   end
+
+  #SELF METHODS
 
   def self.update(options)
       sql = "UPDATE athletes SET 
@@ -65,6 +62,11 @@ class Athlete
     athletes = SqlRunner.run(sql)
     result = athletes.map { |athlete| Athlete.new( athlete ) }
     return result
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM athletes WHERE id = #{id};"
+    SqlRunner.run(sql)
   end
 
 end
