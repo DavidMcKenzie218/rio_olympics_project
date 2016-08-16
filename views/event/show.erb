@@ -1,6 +1,8 @@
-<h2><%= @event.name %></h2>
+<body class="event_background">
 
-<table>
+<h2 class="event_header"><%= @event.name %></h2>
+
+<div class="event_div"><table class="event_table">
   <tr>
     <th>Athlete</th>
     <th>Result</th>
@@ -10,16 +12,19 @@
   <tr>
     <% athletes = @event.athletes %>
     <% athletes.each do |athlete| %>
-    <td><a href="/athletes/<%= athlete.id %>"><%= athlete.name %></a></td>
+    <td><a class="athlete_href" href="/athletes/<%= athlete.id %>"><%= athlete.name %></a></td>
     <td><%= athlete.event_time %></td>
-    <td><a href="/athletes/<%= athlete.nation.first.id %>"><%= athlete.nation.first.name %></a></td>
+    <td><a class="nation_href" href="/athletes/<%= athlete.nation.first.id %>"><%= athlete.nation.first.name %></a></td>
     <% if athlete.medal != nil %>
       <td><%= athlete.medal %></td>
     <% end %>
   </tr>
     <% end %>
 </table>
+</div>
 
-<form action ='/events/<%= @event.id %>/delete' method='post'>
+<div>
+<form class="event_delete_button" action ='/events/<%= @event.id %>/delete' method='post'>
   <input type="submit" value ="Delete this Event">
 </form>
+</div>

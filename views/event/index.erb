@@ -1,8 +1,8 @@
-<h2>Events</h2>
+<h2 class="event_header">Events</h2>
 
 <div>
 
-  <a href="/events/new">Add an Event</a>
+  <a class="event_href" id="add_event" href="/events/new">Add an Event</a>
 
   <table class="event_table">
     <tr>
@@ -10,7 +10,7 @@
       <th>Gold Medalist</th>
       <th>Silver Medalist</th>
       <th>Bronze Medalist</th>
-      <th>Participant Number</th>
+      <th>Number of Participants</th>
     </tr>
     <% @events.each do |event| %>    
     <tr>

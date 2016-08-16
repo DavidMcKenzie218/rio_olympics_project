@@ -1,3 +1,14 @@
+/*HEADERS*/
+
+.event_header{
+  font-family: sans-serif;
+  display: inline-block;
+  position: relative;
+  left: -400px;
+}
+
+/*TABLES*/
+
 .event_table{
   border-collapse: collapse;
   width: 100%;
@@ -5,6 +16,7 @@
   font-family: sans-serif;
   display: inline-block;
   position: relative;
+  clear: left;
 }
 
 .event_table, th, td {
@@ -16,7 +28,53 @@
 
 .event_table, th {
   text-align: left;
-  border-top: 1px solid #ddd;
+  border-bottom: none;
 }
 
 
+/*HREFS*/
+
+.event_href{
+   display: block;
+   border: none;
+   background-color: #56A902;
+   color: white;
+   padding: 25px 55px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 12px;
+   transition-duration: 0.3s;
+   position: relative; 
+}
+
+.event_href:hover {
+  color: #AACD6E;
+}
+
+#add_event{
+  left: 5px;
+}
+
+
+/*BUTTONS*/
+
+.event_delete_button{
+  display: block;
+  transition-duration: 0.3s;
+  position: relative; 
+}
+
+/*DIVS*/
+
+.event_div {
+  height: 300px;
+  overflow: auto;
+  clear:;
+}
+
+/*BACKGROUND*/
+
+.event_background{
+  background-color: #FFFFF3;
+}
