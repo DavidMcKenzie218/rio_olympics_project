@@ -38,6 +38,11 @@ end
 
 #EDIT
 
+get('/nations/:id/edit') do
+  @nation = Nation.find(params['id'].to_i).first
+  erb(:'nation/edit')
+end
+
 #UPDATE
 
 #DESTROY
