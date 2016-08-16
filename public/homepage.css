@@ -1,0 +1,25 @@
+/*BACKGROUNDS*/
+
+.homepage_background {
+  background-image: url("http://static.lakana.com/media.fox26houston.com/photo/2016/07/11/98904_Axis_Rio_Olympics_2016_logo_wBKG_1468250114561_1604125_ver1.0.png")
+}
+
+/*BUTTONS*/
+
+.nav_buttons{
+  border: none;
+  background-color: #56A902;
+  color: white;
+  padding: 25px 55px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  transition-duration: 0.3s;
+  position: relative;
+  left: 640px;
+  float: left;
+}
+
+.nav_buttons:hover{
+  color: #AACD6E;
+}

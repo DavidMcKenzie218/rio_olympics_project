@@ -1,7 +1,10 @@
 <h2>Events</h2>
 
 <div>
-  <table>
+
+  <a href="/events/new">Add an Event</a>
+
+  <table class="event_table">
     <tr>
       <th>Event</th>
       <th>Gold Medalist</th>
@@ -24,9 +27,10 @@
       <% end %>
       <td><%= event.athletes.count %></td>
     
-    <td><a href="/events/<%= event.id %>">Inspect this Event</a></td>
-    <td><a href="/events/<%= event.id %>/edit">Edit this Event</a></td>
+    <td><a class="event_href" href="/events/<%= event.id %>">Inspect this Event</a></td>
+    <td><a class="event_href" href="/events/<%= event.id %>/edit">Edit this Event</a></td>
     </tr>
     <% end %>
   </table>
-</div>
+
+  </div>

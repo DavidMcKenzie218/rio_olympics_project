@@ -5,3 +5,9 @@ require_relative './controllers/athletes_controller.rb'
 require_relative './controllers/nation_controller.rb'
 require_relative './controllers/event_controller.rb'
 require_relative './models/league.rb'
+
+#HOME
+
+get('/') do
+  erb(:home)
+end
