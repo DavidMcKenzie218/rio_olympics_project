@@ -45,4 +45,9 @@ end
 
 #UPDATE
 
+post('/nations/:id') do
+  Nation.update(params)
+  redirect(to('/nations'))
+end
+
 #DESTROY

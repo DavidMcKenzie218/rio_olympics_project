@@ -32,8 +32,8 @@ class Nation
     # binding.pry
     sql = "UPDATE nations SET 
       name = '#{options['name']}',
-      points = #{options['points']}
-      WHERE id = #{options['id']};"
+      points = #{options['points'].to_i}
+      WHERE id = #{options['id'].to_i};"
     SqlRunner.run(sql)
   end
 
