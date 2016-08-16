@@ -8,6 +8,12 @@ end
 
 #CREATE
 
+post('/nations') do
+  @nation = Nation.new(params)
+  @nation.save
+  erb(:'nation/create')
+end
+
 #SHOW
 
 #INDEX
