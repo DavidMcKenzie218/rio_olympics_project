@@ -14,7 +14,7 @@
     <% athletes.each do |athlete| %>
     <td><a class="athlete_href" href="/athletes/<%= athlete.id %>"><%= athlete.name %></a></td>
     <td><%= athlete.event_time %></td>
-    <td><a class="nation_href" href="/athletes/<%= athlete.nation.first.id %>"><%= athlete.nation.first.name %></a></td>
+    <td><a class="nation_href_<%= athlete.nation.first.name%>" id="nation_href" href="/athletes/<%= athlete.nation.first.id %>"></a></td>
     <% if athlete.medal != nil %>
       <td><%= athlete.medal %></td>
     <% end %>

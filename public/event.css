@@ -78,3 +78,55 @@
 .event_background{
   background-color: #FFFFF3;
 }
+
+/*NATION HREF*/
+
+#nation_href{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.nation_href_Brazil {
+  background-image: url("http://a1.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/bra.png&h=50&scale=crop&w=50&location=origin")  
+}
+
+.nation_href_Peru{
+  background-image: url("http://www.abeka.com/BookImages/ClipArt/225592/46x46y50fx50fh/225592-Peru-Flag-color-png.png");
+}
+
+.nation_href_Mexico{
+  background-image: url("http://a1.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/mex.png&h=50&scale=crop&w=50&location=origin");
+}
+
+.nation_href_Germany {
+  background-image: url("http://i.sportstats.com/6aBypQBK-hxwM3b7a.png"); 
+}
+
+.nation_href_France {
+  background-image: url("http://www.abeka.com/BookImages/ClipArt/222356/46x46y50fx50fh/222356-France-Flag-color-png.png");
+}
+
+.nation_href_Hungary {
+  background-image: url("http://www.abeka.com/BookImages/ClipArt/222615/46x46y50fx50fh/222615-Hungary-Flag-color-png.png");
+}
+
+.nation_href_Japan {
+  background-image: url("https://ultra-worldwide.s3.amazonaws.com/wp-content/uploads/2015/05/japan.png");
+}
+
+.nation_href_China {
+  background-image: url("http://i.sportstats.com/GWemfI6n-0pRDwkG1.png");
+}
+
+.nation_href_Spain {
+  background-image: url("https://ls.sportradar.com/ls/crest/medium/132110.png");
+}
+
+.nation_href_Portugal {
+  background-image: url("http://www.abeka.com/BookImages/ClipArt/222275/46x46y50fx50fh/222275-Portugal-Flag-color-png.png");
+}
+
+.nation_href_USA {
+  background-image: url("http://www.freeiconspng.com/uploads/us-flag-icon-12.gif");
+}
