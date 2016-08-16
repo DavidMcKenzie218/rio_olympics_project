@@ -29,10 +29,11 @@ class Nation
   end
 
   def self.update(options)
+    # binding.pry
     sql = "UPDATE nations SET 
-      name = '#{opions['name']},
+      name = '#{options['name']}',
       points = #{options['points']}
-      WHERE id = #{options[id]};"
+      WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end
 

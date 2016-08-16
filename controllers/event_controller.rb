@@ -26,7 +26,7 @@ end
 #INDEX
 
 get('/events') do
-  @events = Event.all
+  @events = Event.all()
   erb(:'event/index')
 end
 

@@ -1,0 +1,26 @@
+<h2>Nations</h2>
+
+<div>
+  
+  <table>
+    <tr>
+      <th>Nation</th>
+      <th>Points</th>
+      <th>Number of Gold Medals</th>
+      <th>Number of Silver Medals</th>
+      <th>Number of Bronze Medals</th>
+      <th>Number of Athletes</th>
+    </tr>
+    <% @nations.each do |nation| %> 
+    <tr>
+      <td><%= nation.name %></td>
+      <td><%= @olympics.nation_points(nation.id) %></td>
+      <td><%= @olympics.number_of_gold_medals(nation.id) %></td>
+      <td><%= @olympics.number_of_silver_medals(nation.id) %></td>
+      <td><%= @olympics.number_of_bronze_medals(nation.id) %></td>
+      <td><%= nation.athlete.count %></td>
+    </tr> 
+    <% end %> 
+  </table>
+
+</div>

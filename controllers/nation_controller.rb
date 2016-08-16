@@ -18,6 +18,18 @@ end
 
 #INDEX
 
+get('/nations') do
+  @nations = Nation.all()
+  @athletes = Athlete.all()
+  @events = Event.all()
+  @olympics = League.new(@nations, @events, @athletes)
+  # binding.pry
+  @olympics.reset_points
+  @olympics.rank_on_medal_points
+  # binding.pry
+  erb(:'nation/index')
+end
+
 #EDIT
 
 #UPDATE
