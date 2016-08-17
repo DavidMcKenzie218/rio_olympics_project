@@ -1,10 +1,10 @@
-<h2>Athletes</h2>
+<h2 class="athlete_header">Athletes</h2>
 
 <div>
 
-  <a href="/athletes/new">Add an Athlete</a>
+  <a class="athlete_href" id="add_athlete" href="/athletes/new">Add an Athlete</a>
 
-  <table>
+  <table class="athlete_table">
     <tr>
       <th>Nation</th>
       <th>Athlete</th>
@@ -14,14 +14,14 @@
     </tr>
     <% @athletes.each do |athlete| %>
     <tr>
-      <td><%= athlete.nation.first.name %></td>
+      <td><div class="nation_href_<%= athlete.nation.first.name%>" id="athlete_nation"></div></td>
       <td><%= athlete.name %></td>
       <td><%= athlete.event.first.name %></td> 
       <td><%= athlete.event_time %></td>
-      <td><%= athlete.medal %></td>
+      <td><div class="medal_<%= athlete.medal %>"></div></td>
 
-      <td><a href="/athletes/<%= athlete.id %>">Inspect this Athlete</a></td>
-      <td><a href="/athletes/<%= athlete.id %>/edit">Edit this Athlete</a></td>
+      <td><a class="athlete_href" href="/athletes/<%= athlete.id %>">Inspect this Athlete</a></td>
+      <td><a class="athlete_href" href="/athletes/<%= athlete.id %>/edit">Edit this Athlete</a></td>
     </tr>
     <% end %>
   </table>
