@@ -25,6 +25,7 @@
   position: relative;
   top: 100px;
   left: 100px;
+  background-color: #FFFFF3;
 }
 
 .event_input_text:focus{
@@ -47,6 +48,7 @@
   display: inline-block;
   top: 100px;
   left: -600px;
+  background-color: #FFFFF3;
 }
 
 /*TABLES*/

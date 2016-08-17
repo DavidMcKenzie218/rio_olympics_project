@@ -1,28 +1,32 @@
-<h2>Add Athlete</h2>
+<body class="athlete_background">
+
+<h2 class="athlete_header">Add Athlete</h2>
 
 <form action="/athletes" method="post">
   
-<label for="name">Name: </label>
-<input type="text" name="name">
+<label class="athlete_name_label" for="name">Name: </label>
+<input class="athlete_input_text" type="text" name="name">
 
-<label for="nation_id">Nation: </label>
-<select name="nation_id">
+<label class="athlete_name_label" for="nation_id">Nation: </label>
+
+<select class="athlete_select" name="nation_id">
   <% @nations.each do |nation| %>
   <option value="<%= nation.id  %>"><%= nation.name %></option>
   <% end %>
 </select>
 
-<label for="event_id">Event: </label>
-<select name="event_id">
+
+<label class="athlete_name_label" for="event_id">Event: </label>
+<select class="athlete_select" name="event_id">
   <% @events.each do |event| %>
   <option value="<%= event.id %>"><%= event.name %></option>
   <% end %>
 </select>
 
 
-<label for="event_time">Event Time: </label>
-<input type="number" step="0.01"name="event_time">
+<label class="athlete_name_label" for="event_time">Event Time: </label>
+<input class="athlete_input_text" type="number" step="0.01" name="event_time">
 
-<input type="submit" name="Add this Athlete">
+<input class="athlete_submit" type="submit" name="Add this Athlete">
 
 </form>
