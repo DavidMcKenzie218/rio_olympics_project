@@ -1,13 +1,15 @@
-<h2>Athlete</h2>
+<body class="athlete_background">
 
-<h3>Name: </h3>
-<p><%= @athlete.name %></p>
+<h2 class="athlete_header">Athlete</h2>
 
-<h3>Nation</h3>
-<p><%= @athlete.nation.first.name %></p>
+<h3 class="athlete_name_label_output">Name: </h3>
+<p class="athlete_output_text"><%= @athlete.name %></p>
 
-<h3>Event: </h3>
-<p><%= @athlete.event.first.name %></p>
+<h3 class="athlete_name_label_output">Nation</h3>
+<p class="athlete_output_text"><%= @athlete.nation.first.name %></p>
 
-<h3>Time: </h3>
-<p><%= @athlete.event_time %></p>
+<h3 class="athlete_name_label_output">Event: </h3>
+<p class="athlete_output_text"><%= @athlete.event.first.name %></p>
+
+<h3 class="athlete_name_label_output">Time: </h3>
+<p class="athlete_output_text"><%= @athlete.event_time %></p>
