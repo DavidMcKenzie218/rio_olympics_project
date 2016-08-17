@@ -46,6 +46,29 @@
     left: 100px;
 }
 
+.athlete_name_label_output {
+  font-family: sans-serif;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  top: 100px;
+  left: 100px;
+}
+
+.athlete_output_text {
+  font-family: sans-serif;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  top: 100px;
+  left: 100px;
+  background-color: #FFFFF3;
+  }
+
+  #output_name {
+    left: -590px;
+  }
+
 /*TABLES*/
 .athlete_table{
   border-collapse: collapse;

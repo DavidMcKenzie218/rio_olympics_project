@@ -2,14 +2,17 @@
 
 <h2 class="athlete_header">Athlete</h2>
 
-<h3 class="athlete_name_label_output">Name: </h3>
-<p class="athlete_output_text"><%= @athlete.name %></p>
+<h3 class="athlete_name_label_output" id="output_name">Name: </h3>
+<p class="athlete_output_text" id="output_name"><%= @athlete.name %></p>
+<br>
 
 <h3 class="athlete_name_label_output">Nation</h3>
 <p class="athlete_output_text"><%= @athlete.nation.first.name %></p>
+<br>
 
 <h3 class="athlete_name_label_output">Event: </h3>
 <p class="athlete_output_text"><%= @athlete.event.first.name %></p>
+<br>
 
 <h3 class="athlete_name_label_output">Time: </h3>
 <p class="athlete_output_text"><%= @athlete.event_time %></p>
