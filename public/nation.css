@@ -63,10 +63,6 @@
   position: relative;
 }
 
-.event_table, th, td {
-  width: 200px;
-}
-
 #table_pos{
   top: 40px;
 }

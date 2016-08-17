@@ -9,6 +9,10 @@ th{
   color: white;
 }
 
+ th, td {
+  width: 200px;
+}
+
 /*BUTTONS*/
 
 /*DIVS*/
