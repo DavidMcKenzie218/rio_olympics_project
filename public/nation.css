@@ -7,7 +7,49 @@
   left: -400px;
 }
 
-/*EVENT LABELS AND TEXT FIELDS*/
+/*LABELS AND TEXT FIELDS*/
+
+.nation_name_label {
+  font-family: sans-serif;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  top: 100px;
+  left: 100px;
+}
+
+.nation_input_text {
+  border: none;
+  border-bottom: 2px solid #485144;
+  display: inline-block;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  background-color: #FFFFF3;
+}
+
+.nation_input_text:focus{
+  border: 3px solid #555;
+}
+
+.nation_output_text {
+  font-family: sans-serif;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  top: 100px;
+  left: -600px;
+  background-color: #FFFFF3;
+}
+
+.nation_name_label_output {
+  font-family: sans-serif;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  top: 100px;
+  left: -600px;
+}
 
 /*TABLES*/
 
@@ -50,6 +92,21 @@
 }
 
 /*BUTTONS*/
+
+.nation_submit {
+  border: none;
+  background-color: #56A902;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  transition-duration: 0.3s;
+  position: relative;
+  top: 85px;
+  left: 440px;
+  float: left;
+}
 
 /*DIVS*/
 
