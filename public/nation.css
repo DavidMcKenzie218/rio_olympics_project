@@ -1,67 +1,9 @@
 /*HEADERS*/
 
-.nation_header {
-  font-family: sans-serif;
-  display: inline-block;
-  position: relative;
-  left: -400px;
-}
-
 /*LABELS AND TEXT FIELDS*/
 
-.nation_name_label {
-  font-family: sans-serif;
-  font-size: 18px;
-  position: relative;
-  display: inline-block;
-  top: 100px;
-  left: 100px;
-}
-
-.nation_input_text {
-  border: none;
-  border-bottom: 2px solid #485144;
-  display: inline-block;
-  position: relative;
-  top: 100px;
-  left: 100px;
-  background-color: #FFFFF3;
-}
-
-.nation_input_text:focus{
-  border: 3px solid #555;
-}
-
-.nation_output_text {
-  font-family: sans-serif;
-  font-size: 18px;
-  position: relative;
-  display: inline-block;
-  top: 100px;
-  left: -600px;
-  background-color: #FFFFF3;
-}
-
-.nation_name_label_output {
-  font-family: sans-serif;
-  font-size: 18px;
-  position: relative;
-  display: inline-block;
-  top: 100px;
-  left: -600px;
-}
 
 /*TABLES*/
-
-.nation_table {
-  border-collapse: collapse;
-  margin: auto;
-  width: 100%;
-  font-size: 14px;
-  font-family: sans-serif;
-  display: inline-block;
-  position: relative;
-}
 
 #table_pos{
   top: 40px;
@@ -69,44 +11,11 @@
 
 /*HREFS*/
 
-.nation_href {
-  display: block;
-  border: none;
-  background-color: #56A902;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  transition-duration: 0.3s;
-  position: relative; 
-}
-
-.nation_href:hover {
-  color: #AACD6E;
-}
-
 #add_nation{
   top: 20px;
 }
 
 /*BUTTONS*/
-
-.nation_submit {
-  border: none;
-  background-color: #56A902;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  display: block;
-  font-size: 12px;
-  transition-duration: 0.3s;
-  position: relative;
-  top: 85px;
-  left: 440px;
-  float: left;
-}
 
 /*DIVS*/
 

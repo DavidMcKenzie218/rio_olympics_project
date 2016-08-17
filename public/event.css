@@ -1,55 +1,6 @@
 /*HEADERS*/
 
-.event_header{
-  font-family: sans-serif;
-  display: inline-block;
-  position: relative;
-  left: -400px;
-}
-
-/*EVENT LABELS AND TEXT FIELDS*/
-
-.event_name_label {
-  font-family: sans-serif;
-  font-size: 18px;
-  position: relative;
-  display: inline-block;
-  top: 100px;
-  left: 100px;
-}
-
-.event_input_text {
-  border: none;
-  border-bottom: 2px solid #485144;
-  display: inline-block;
-  position: relative;
-  top: 100px;
-  left: 100px;
-  background-color: #FFFFF3;
-}
-
-.event_input_text:focus{
-  border: 3px solid #555;
-}
-
-.event_name_label_output {
-  font-family: sans-serif;
-  font-size: 18px;
-  position: relative;
-  display: inline-block;
-  top: 100px;
-  left: -600px;
-}
-
-.event_output_text {
-  font-family: sans-serif;
-  font-size: 18px;
-  position: relative;
-  display: inline-block;
-  top: 100px;
-  left: -600px;
-  background-color: #FFFFF3;
-}
+/*LABELS AND TEXT FIELDS*/
 
 #athlete_pos {
   left: -600px;
@@ -57,22 +8,13 @@
 
 /*TABLES*/
 
-.event_table{
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 14px;
-  font-family: sans-serif;
-  display: inline-block;
-  position: relative;
-}
-
-.event_table, th, td {
+#event_table, th, td {
     height: 40px;
     padding: 5px;
     border-bottom: 1px solid #ddd;
 }
 
-.event_table, th {
+#event_table, th {
   text-align: left;
   border-bottom: none;
 }
@@ -80,55 +22,11 @@
 
 /*HREFS*/
 
-.event_href{
-   display: block;
-   border: none;
-   background-color: #56A902;
-   color: white;
-   padding: 10px 25px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 12px;
-   transition-duration: 0.3s;
-   position: relative; 
-}
-
-.event_href:hover {
-  color: #AACD6E;
-}
-
 #add_event{
   left: 5px;
 }
 
-
 /*BUTTONS*/
-
-.event_delete_button{
-  display: block;
-  transition-duration: 0.3s;
-  position: relative; 
-}
-
-.event_submit {
-  border: none;
-  background-color: #56A902;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  display: block;
-  font-size: 12px;
-  transition-duration: 0.3s;
-  position: relative;
-  top: 85px;
-  left: 440px;
-  float: left;
-}
-
-.event_submit:hover {
-  color: #AACD6E;
-}
 
 /*DIVS*/
 
@@ -150,52 +48,4 @@
   display: inline-block;
   height: 50px;
   width: 50px;
-}
-
-.nation_href_Brazil {
-  background-image: url("http://a1.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/bra.png&h=50&scale=crop&w=50&location=origin")  
-}
-
-.nation_href_Peru{
-  background-image: url("http://www.abeka.com/BookImages/ClipArt/225592/46x46y50fx50fh/225592-Peru-Flag-color-png.png");
-}
-
-.nation_href_Mexico{
-  background-image: url("http://a1.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/mex.png&h=50&scale=crop&w=50&location=origin");
-}
-
-.nation_href_Germany {
-  background-image: url("http://i.sportstats.com/6aBypQBK-hxwM3b7a.png"); 
-}
-
-.nation_href_France {
-  background-image: url("http://www.abeka.com/BookImages/ClipArt/222356/46x46y50fx50fh/222356-France-Flag-color-png.png");
-}
-
-.nation_href_Hungary {
-  background-image: url("http://www.abeka.com/BookImages/ClipArt/222615/46x46y50fx50fh/222615-Hungary-Flag-color-png.png");
-}
-
-.nation_href_Japan {
-  background-image: url("https://ultra-worldwide.s3.amazonaws.com/wp-content/uploads/2015/05/japan.png");
-}
-
-.nation_href_China {
-  background-image: url("http://i.sportstats.com/GWemfI6n-0pRDwkG1.png");
-}
-
-.nation_href_Spain {
-  background-image: url("https://ls.sportradar.com/ls/crest/medium/132110.png");
-}
-
-.nation_href_Portugal {
-  background-image: url("http://www.abeka.com/BookImages/ClipArt/222275/46x46y50fx50fh/222275-Portugal-Flag-color-png.png");
-}
-
-.nation_href_USA {
-  background-image: url("http://www.freeiconspng.com/uploads/us-flag-icon-12.gif");
-}
-
-.nation_href_Great {
-  background-image: url("http://a.deviantart.net/avatars/l/i/little-britain.png");
 }

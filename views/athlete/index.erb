@@ -1,12 +1,12 @@
 <body class="athlete_background">
 
-<h2 class="athlete_header">Athletes</h2>
+<h2 class="header">Athletes</h2>
 
 <div>
 
-  <a class="athlete_href" id="add_athlete" href="/athletes/new">Add an Athlete</a>
+  <a class="href" id="add_athlete" href="/athletes/new">Add an Athlete</a>
 
-  <table class="athlete_table">
+  <table class="table">
     <tr>
       <th>Nation</th>
       <th>Athlete</th>
@@ -22,8 +22,8 @@
       <td><%= athlete.event_time %></td>
       <td><div class="medal_<%= athlete.medal %>"></div></td>
 
-      <td><a class="athlete_href" href="/athletes/<%= athlete.id %>">Inspect this Athlete</a></td>
-      <td><a class="athlete_href" href="/athletes/<%= athlete.id %>/edit">Edit this Athlete</a></td>
+      <td><a class="href" href="/athletes/<%= athlete.id %>">Inspect this Athlete</a></td>
+      <td><a class="href" href="/athletes/<%= athlete.id %>/edit">Edit this Athlete</a></td>
     </tr>
     <% end %>
   </table>

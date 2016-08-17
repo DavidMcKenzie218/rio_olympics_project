@@ -1,12 +1,12 @@
 <body class="event_background">
 
-<h2 class="event_header">Edit <%= @event.name %></h2>
+<h2 class="header">Edit <%= @event.name %></h2>
 
 <form action="/events/<%= @event.id %>" method="post">
   
-<label class="event_name_label" for='name'>Name: </label>
-<input class="event_input_text" type="text" name="name" value="<%= @event.name %>">
+<label class="name_label" for='name'>Name: </label>
+<input class="input_text" type="text" name="name" value="<%= @event.name %>">
 
-<input class="event_submit" type="submit" name="edit" value="Edit this Event">
+<input class="submit" type="submit" name="edit" value="Edit this Event">
 
 </form>

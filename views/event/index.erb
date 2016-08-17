@@ -1,12 +1,12 @@
 <body class="event_background">
 
-<h2 class="event_header">Events</h2>
+<h2 class="header">Events</h2>
 
 <div>
 
-  <a class="event_href" id="add_event" href="/events/new">Add an Event</a>
+  <a class="href" id="add_event" href="/events/new">Add an Event</a>
 
-  <table class="event_table">
+  <table class="table" id="event_table">
     <tr>
       <th>Event</th>
       <th>Gold Medalist</th>
@@ -29,8 +29,8 @@
       <% end %>
       <td><%= event.athletes.count %></td>
     
-    <td><a class="event_href" href="/events/<%= event.id %>">Inspect this Event</a></td>
-    <td><a class="event_href" href="/events/<%= event.id %>/edit">Edit this Event</a></td>
+    <td><a class="href" href="/events/<%= event.id %>">Inspect this Event</a></td>
+    <td><a class="href" href="/events/<%= event.id %>/edit">Edit this Event</a></td>
     </tr>
     <% end %>
   </table>
