@@ -1,0 +1,67 @@
+/*HEADERS*/
+
+.nation_header {
+  font-family: sans-serif;
+  display: inline-block;
+  position: relative;
+  left: -400px;
+}
+
+/*EVENT LABELS AND TEXT FIELDS*/
+
+/*TABLES*/
+
+.nation_table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  font-family: sans-serif;
+  display: inline-block;
+  position: relative;
+  clear: left;
+}
+
+#table_pos{
+  top: 40px;
+}
+
+/*HREFS*/
+
+.nation_href {
+  display: block;
+  border: none;
+  background-color: #56A902;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  transition-duration: 0.3s;
+  position: relative; 
+}
+
+.nation_href:hover {
+  color: #AACD6E;
+}
+
+#add_nation{
+  top: 20px;
+}
+
+/*BUTTONS*/
+
+/*DIVS*/
+
+/*BACKGROUND*/
+
+.nation_background {
+ background-color: #FFFFF3;
+}
+
+/*NATION FLAG*/
+
+#nation_flag {
+  height: 50px;
+  width: 50px;
+}

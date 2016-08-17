@@ -1,11 +1,12 @@
-<h2>Nations</h2>
+<h2 class="nation_header">Nations</h2>
 
 <div>
 
-  <a href="/nations/new">Add a Nation</a>
+  <a class="nation_href" id="add_nation" href="/nations/new">Add a Nation</a>
   
-  <table>
+  <table class="nation_table" id="table_pos">
     <tr>
+      <th>Flag</th>
       <th>Nation</th>
       <th>Points</th>
       <th>Number of Gold Medals</th>
@@ -15,6 +16,7 @@
     </tr>
     <% @nations.each do |nation| %> 
     <tr>
+    <td><div class="nation_href_<%= nation.name %>" id="nation_flag"></div></td>
       <td><%= nation.name %></td>
       <td><%= @olympics.nation_points(nation.id) %></td>
       <td><%= @olympics.number_of_gold_medals(nation.id) %></td>
@@ -22,8 +24,8 @@
       <td><%= @olympics.number_of_bronze_medals(nation.id) %></td>
       <td><%= nation.athlete.count %></td>
 
-      <td><a href="/nations/<%= nation.id %>">Inspect this Nation</a></td>
-      <td><a href="/nations/<%= nation.id %>/edit">Edit this Nation</a></td>
+      <td><a class="nation_href" href="/nations/<%= nation.id %>">Inspect this Nation</a></td>
+      <td><a class="nation_href" href="/nations/<%= nation.id %>/edit">Edit this Nation</a></td>
     </tr> 
     <% end %> 
   </table>
