@@ -55,12 +55,16 @@
 
 .nation_table {
   border-collapse: collapse;
+  margin: auto;
   width: 100%;
   font-size: 14px;
   font-family: sans-serif;
   display: inline-block;
   position: relative;
-  clear: left;
+}
+
+.event_table, th, td {
+  width: 200px;
 }
 
 #table_pos{
@@ -110,6 +114,7 @@
 
 /*DIVS*/
 
+
 /*BACKGROUND*/
 
 .nation_background {
@@ -121,4 +126,6 @@
 #nation_flag {
   height: 50px;
   width: 50px;
+  margin: none;
+  padding: none;
 }
