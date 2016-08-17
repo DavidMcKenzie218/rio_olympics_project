@@ -1,10 +1,12 @@
-<h2>Edit <%= @nation.name %></h2>
+<body class="nation_background">
+
+<h2 class="nation_header">Edit <%= @nation.name %></h2>
 
 <form action="/nations/<%= @nation.id %>" method="post">
   
-<label for="name">Name: </label>
-<input type="text" name="name" value="<%= @nation.name %>">
+<label class="nation_name_label" for="name">Name: </label>
+<input class="nation_input_text" type="text" name="name" value="<%= @nation.name %>">
 
-<input type="submit" name="edit" value="Edit this Nation">
+<input class="nation_submit" type="submit" name="edit" value="Edit this Nation">
 
 </form>
