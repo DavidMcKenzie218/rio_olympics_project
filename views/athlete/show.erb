@@ -1,16 +1,18 @@
-<h2><%= @athlete.name %></h2>
+<body class="athlete_background">
 
-<h3>Nation</h3>
-<p><a href="/nations/<%= @athlete.nation.first.id %>"><%= @athlete.nation.first.name  %></a></p>
+<h2 class="athlete_header"><%= @athlete.name %></h2>
 
-<h3>Event</h3>
-<p><a href="/events/<%= @athlete.event.first.id %>"><%= @athlete.event.first.name %></a></p>
+<h3 class="athlete_name_label" id="athlete_pos">Nation</h3>
+<p><a href="/nations/<%= @athlete.nation.first.id %>" class="nation_href_<%= @athlete.nation.first.name %>" id="athlete_nation_pos" ></a></p>
+
+<h3 class="athlete_name_label">Event</h3>
+<p><a class="athlete_href" id="href_pos" href="/events/<%= @athlete.event.first.id %>"><%= @athlete.event.first.name %></a></p>
 
 <% if @athlete.medal != nil %>
-  <h3>Medal: </h3>
-  <p><%= @athlete.medal %></p>
+  <h3 class="athlete_name_label">Medal: </h3>
+  <p><div class="medal_<%= @athlete.medal %>" id="medal_pos"></div></p>
 <% end %>
 
 <form action ='/athletes/<%= @athlete.id %>/delete' method='post'>
-    <input type="submit" value ="Delete this Athlete">
+    <input class="athlete_submit" id="button_pos" type="submit" value ="Delete this Athlete">
 </form>

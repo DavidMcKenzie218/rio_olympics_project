@@ -104,6 +104,12 @@
   top: -5px
 }
 
+#href_pos {
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
 /*BUTTONS*/
 
 .athlete_submit {
@@ -121,6 +127,10 @@
   float: left;
 }
 
+#button_pos {
+  left: 100px;
+}
+
 /*DIVS*/
 
 /*BACKGROUND*/
@@ -136,7 +146,22 @@
    width: 50px;
 }
 
+#athlete_nation_pos{
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  top: 75px;
+  left: 100px;
+}
+
 /*MEDAL*/
+
+#medal_pos {
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
 
 .medal_gold {
   height: 50px;

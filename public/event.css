@@ -51,6 +51,10 @@
   background-color: #FFFFF3;
 }
 
+#athlete_pos {
+  left: -600px;
+}
+
 /*TABLES*/
 
 .event_table{
