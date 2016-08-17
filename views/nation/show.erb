@@ -1,6 +1,8 @@
-<h2><%= @nation.name %></h2>
+<body class="nation_background">
 
-<table>
+<h2 class="nation_header"><%= @nation.name %></h2>
+
+<table class="nation_table">
   <tr>
     <th>Athlete</th>
     <th>Medals</th>
@@ -8,14 +10,14 @@
   <tr>
     <% athletes = @nation.athlete() %>
     <% athletes.each do |athlete| %>
-    <td><a href="/athletes/<%= athlete.id %>"><%= athlete.name %></a></td>
+    <td><a class="nation_href" href="/athletes/<%= athlete.id %>"><%= athlete.name %></a></td>
     <% if athlete.medal != nil %>
-      <td><%= athlete.medal %></td>
+      <td><div class="medal_<%= athlete.medal %>"></td>
     <% end %>
   </tr>
   <% end %>
 </table>
 
 <form action ='/nations/<%= @nation.id %>/delete' method='post'>
-  <input type="submit" value ="Disqulaify this Nation">
+  <input class="nation_submit" type="submit" value ="Disqulaify this Nation">
 </form>
